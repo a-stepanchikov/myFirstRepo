@@ -8,3 +8,5 @@ const adaptive = 6;
 alert ('Hello World!');
 
 console.log('Hello World');
+
+const a = 1
