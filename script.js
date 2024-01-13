@@ -1,22 +1,3 @@
-let myVar;
-
-myVar = 10; 
-console.log (typeof myVar);
-myVar = 12345678998745621223n;
-console.log (typeof myVar);
-myVar = "Hello World!";
-console.log (typeof myVar);
-myVar = true;
-console.log (typeof myVar);
-myVar = null;
-console.log (typeof myVar);
-myVar = undefined;
-console.log (typeof myVar);
-
-let i = 5
-
-console.log (--i);
-
 const title = "Project";
 const screens = "Простые, Сложные, Интерактивные";
 const screenPrice = 11;
