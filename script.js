@@ -8,7 +8,13 @@ let service1 = prompt('Какой дополнительный тип услуг
 let servicePrice1 = +prompt('Сколько это будет стоить?');
 let service2 = prompt('Какой дополнительный тип услуги нужен?');
 let servicePrice2 = +prompt('Сколько это будет стоить?');
+
 let rollback = 5;
+let allServicePrices
+let fullPrice
+let servicePercentPrice
+
+
 
 const getTitle = function (str) {
     return str[0].toUpperCase() + str.slice(1).toLowerCase();
@@ -21,10 +27,6 @@ const getAllServicePrices = function (servp1, servp2) {
 function getFullPrice(count, call) {
     return count + call(servicePrice1, servicePrice2)
 }
-
-let fullPrice = getFullPrice(screenPrice, getAllServicePrices);
-let servicePercentPrice = fullPrice - fullPrice * (rollback / 100);
-let allServicePrices = getAllServicePrices(servicePrice1, servicePrice2);
 
 const getServicePercentPrices = function () {
     return fullPrice - fullPrice * (rollback / 100);
@@ -45,6 +47,10 @@ const getRollbackMessage = function (price) {
       return "Что то пошло не так"
   }   
 }
+
+fullPrice = getFullPrice(screenPrice, getAllServicePrices);
+servicePercentPrice = getServicePercentPrices();
+allServicePrices = getAllServicePrices(servicePrice1, servicePrice2);
 
 showTypeOf(title);
 showTypeOf(screenPrice);
